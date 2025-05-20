@@ -1,13 +1,6 @@
 import SaltBadge from './SaltBadge'
-import { Suspense, useState } from 'react'
-// import { Spinner } from '@salt-ds/core/dist-es/spinner/Spinner'
-// import { SaltProvider } from '@salt-ds/core/dist-es/salt-provider/SaltProvider'
-
-const AsyncLoadedSaltBadge = () => (
-    <Suspense fallback={'Loading salt badge...'}>
-        <SaltBadge />
-    </Suspense>
-)
+import LazyLoadedSaltbadge from './LazyLoadedSaltBadge'
+import { useState } from 'react'
 
 const style = {
     background: '#800',
@@ -26,9 +19,8 @@ const App = () => {
         <h2>Salt Badge Below!</h2>
         <p/>
         {showSaltContent && (
-            // <div/>
-            <AsyncLoadedSaltBadge />
-            //  <SaltBadge />
+            <SaltBadge />
+            // <LazyLoadedSaltbadge />
         )}
         <button style={style} onClick={toggleShowSaltContent}>
             {showSaltContent ? 'Hide Salt Content' : 'Show Salt Content'}

@@ -77,13 +77,15 @@ module.exports = {
           './Button': './src/Button',
         },
         shared: {
-          ...deps,
           react: {
             singleton: true,
           },
           'react-dom': {
             singleton: true,
           },
+          '@salt-ds/core': {
+            singleton: true,
+          }
         },
       })
   ],

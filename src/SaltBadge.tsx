@@ -1,12 +1,10 @@
-// import { Badge, SaltProvider } from '@salt-ds/core
-import('@salt-ds/core')
+import { Badge, SaltProvider } from '@salt-ds/core'
 
 const SaltBadge = () => (
     <div>
-        ***
-        {/* <SaltProvider>
+        <SaltProvider>
             <Badge value="Salt Badge Here!" />
-        </SaltProvider>  */}
+        </SaltProvider> 
     </div>
 )
 
